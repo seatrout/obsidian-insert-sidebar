@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-insert-sidebar",
 	"version": "0.12.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Ta quick and dirty acb hack to add sidenotes",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
