@@ -42,7 +42,7 @@ this.addCommand({
 			name: 'make an open side note',
 			editorCallback:(editor:Editor,view:MarkdownView)=> {
 				const noteBody = editor.getSelection();
-				const openSideNote = '<span class="aside-show>"';
+				const openSideNote = '<span class="aside-show">';
 				const endSideNote='</span>';
 				editor.replaceSelection(openSideNote+noteBody+endSideNote);
 			}
@@ -52,7 +52,7 @@ this.addCommand({
 			name: 'make a hidden side note',
 			editorCallback:(editor:Editor,view:MarkdownView)=> {
 				const noteBody = editor.getSelection();
-				const openSideNote = '<span class="aside-hide>"';
+				const openSideNote = '<span class="aside-hide">';
 				const endSideNote='</span>';
 				editor.replaceSelection(openSideNote+noteBody+endSideNote);
 			}
