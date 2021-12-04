@@ -45,6 +45,26 @@ export default class MyPlugin extends Plugin {
 				editor.replaceSelection('Sample Editor Command');
 			}
 		});
+		this.addCommand({
+			id: 'sidenote-open',
+			name: 'make an open side note',
+			editorCallback:(editor:Editor,view:MarkdownView)=> {
+				const noteBody = editor.getSelection();
+				const openSideNote = '<span class="aside-show>"';
+				const endSideNote='</span>';
+				editor.replaceSelection(openSideNote+noteBody+endSideNote);
+			}
+		})
+		this.addCommand({
+			id: 'sidenote-hidden',
+			name: 'make a hidden side note',
+			editorCallback:(editor:Editor,view:MarkdownView)=> {
+				const noteBody = editor.getSelection();
+				const openSideNote = '<span class="aside-hide>"';
+				const endSideNote='</span>';
+				editor.replaceSelection(openSideNote+noteBody+endSideNote);
+			}
+		})
 		// This adds a complex command that can check whether the current state of the app allows execution of the command
 		this.addCommand({
 			id: 'open-sample-modal-complex',
