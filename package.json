@@ -1,7 +1,7 @@
 {
 	"name": "obsidian-insert-sidebar",
 	"version": "0.12.0",
-	"description": "Ta quick and dirty acb hack to add sidenotes",
+	"description": "A tiny hack to add sidenotes to obsidian with a keystroke",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
