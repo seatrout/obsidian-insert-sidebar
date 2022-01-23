@@ -8,7 +8,7 @@
 		"build": "node esbuild.config.mjs production"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Andrew Brown seatrout@github.com",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^16.11.6",

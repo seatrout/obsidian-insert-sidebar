@@ -38,11 +38,12 @@ export default class ACBPlugin extends Plugin {
 		});
 		*/
 		// This adds an editor command that can perform some operation on the current editor instance
-this.addCommand({
+		this.addCommand({
 			id: 'sidenote-open',
 			name: 'make an open side note',
 			editorCallback:(editor:Editor,view:MarkdownView)=> {
 				const noteBody = editor.getSelection();
+
 				const openSideNote = '<span class="aside-show">';
 				const endSideNote='</span>';
 				editor.replaceSelection(openSideNote+noteBody+endSideNote);
@@ -57,6 +58,19 @@ this.addCommand({
 				const endSideNote='</span>';
 				editor.replaceSelection(openSideNote+noteBody+endSideNote);
 			}
+		})
+		this.addCommand({
+			id: 'internal-link',
+			name: 'Convert selected text to link',
+			editorCallback:(editor:Editor,view:MarkdownView)=> {
+				const linktext = editor.getSelection();
+				const startpos = editor.getCursor("from")
+				const openlink = '[[|';
+				const endlink=']]';
+				editor.replaceSelection(openlink+linktext+endlink);
+				editor.setCursor(startpos)
+			}
+
 		})
 		// This adds a complex command that can check whether the current state of the app allows execution of the command
 
