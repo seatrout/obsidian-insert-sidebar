@@ -1,9 +1,9 @@
 {
 	"id": "obsidian-insert-sidebar",
 	"name": "Insert sidenote",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"minAppVersion": "0.12.0",
-	"description": "This is a hack to make sidenotes even when curly quotes are used",
+	"description": "This is a hack to make internal links and sidenotes even when curly quotes are used",
 	"author": "Andrew Brown",
 	"authorUrl": "https://github.com/seatrout",
 	"isDesktopOnly": false
